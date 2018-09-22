@@ -22,20 +22,47 @@ float Point::getY(void){
   return y;
 }
 
-void Point::print(void){
-  cout << "(" << x << ","
-       << y << ")";
-}
-
 Point Point::operator+(Point p1){
   Point ret;
   ret.x = x + p1.x;
   ret.y = y + p1.y;
   return ret;
 }
+
 Point Point::operator-(Point p1){
   Point ret;
   ret.x = x - p1.x;
   ret.y = y - p1.y;
   return ret;
+}
+
+Point Point::add(Point p1)
+{
+    Point ret;
+    ret.x = x + p1.x;
+    ret.y = y + p1.y;
+    return ret;
+}
+
+Point Point::sub(Point p1)
+{
+    Point ret;
+    ret.x = x - p1.x;
+    ret.y = y - p1.y;
+    return ret;
+}
+
+float Point::norma()
+{
+    return sqrt(x*x + y*y);
+}
+
+void Point::translada(float a, float b)
+{
+    x= a+x;y=b+y;
+}
+
+void Point::imprime(void){
+  cout << "(" << x << ","
+       << y << ")";
 }

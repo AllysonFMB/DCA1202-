@@ -1,7 +1,6 @@
 #ifndef POINT_H
 #define POINT_H
 
-
 class Point{
 private:
     float x;
@@ -17,11 +16,16 @@ float getY(void);
 Point operator + (Point p1);
 Point operator - (Point p1);
 
-void print(void);
+Point add(Point p1);
+Point sub(Point p1);
 
+
+float norma(void);
+
+void translada(float a, float b);
+
+void imprime(void);
 
 };
-
-
 
 #endif // POINT_H

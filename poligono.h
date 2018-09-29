@@ -8,11 +8,13 @@ private:
     Point pontos[100];
 public:
 
-void insertVertice(Point p);
-void insertVertice(float a, float b);
-int numerodeVertice();
+void insertPontos(Point p);
+void insertPontos(float a, float b);
+int numerodePontos();
+
 void transladaPoligono(float a, float b);
 float areaPoligono();
+void rotacaoPoligono(float angulo);
 void imprimirPoligono();
 
 };

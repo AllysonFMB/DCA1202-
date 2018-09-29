@@ -34,20 +34,24 @@ int main()
 
     cout<<"teste de polignos:"<<endl;
 
-    a.insertVertice(0,0);
-    a.insertVertice(0,1);
-    a.insertVertice(1,1);
-    a.insertVertice(0,1);
+    a.insertPontos(0,0);
+    a.insertPontos(1,0);
+    a.insertPontos(1,1);
+    a.insertPontos(0,1);
 
-    cout<<a.numerodeVertice()<<endl;
 
-    a.imprimirPoligono();
-    a.transladaPoligono(1,1);
-    cout<<endl;
+    cout<<a.numerodePontos()<<endl;
 
     a.imprimirPoligono();
     float r= a.areaPoligono();
     cout<<endl<<r;
+    a.rotacaoPoligono(90);
+    a.imprimirPoligono();
+    cout<<endl;
+    a.transladaPoligono(1,1);
+    cout<<endl;
+
+    a.imprimirPoligono();
 
 
 

@@ -10,7 +10,6 @@ void Poligono::insertPontos(Point p)
     if(npontos == 0){
         npontos = 1;
         pontos[npontos] = p;
-
     }
     else{
         npontos ++;
@@ -26,14 +25,12 @@ void Poligono::insertPontos(float a, float b)
         npontos = 1;
         p.setXY(a,b);
         pontos[npontos] = p;
-
     }
     else{
         npontos ++;
         p.setXY(a,b);
         pontos[npontos] = p;
     }
-
 }
 
 int Poligono::numerodePontos()
@@ -66,9 +63,10 @@ float Poligono::areaPoligono()
 void Poligono::rotacaoPoligono(float angulo)
 {
     float rad = angulo*3.141592/180;
-    for(int i=1; i<=npontos; i++){
-        pontos[i].setX(pontos[i].getX() * cos(rad) - (pontos[i].getY() * sin(rad)) );
-        pontos[i].setY(pontos[i].getX() * sin(rad) + (pontos[i].getY() * cos(rad)) );
+
+    for(int i=1; i<= npontos; i++){
+        pontos[i].setX((pontos[i].getX() * cos(rad)) - (pontos[i].getY() * sin(rad)) );
+        pontos[i].setY((pontos[i].getX() * sin(rad)) + (pontos[i].getY() * cos(rad)) );
     }
 }
 

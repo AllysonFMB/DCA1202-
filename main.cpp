@@ -2,13 +2,14 @@
 #include <cmath>
 #include "point.h"
 #include "poligono.h"
-
+#include "retangulo.h"
 using namespace std;
 
 int main()
 {
     Point p1, p2, p3, p4,p5;
     Poligono a;
+    Retangulo b;
 
     p1.setX(1);
     p1.setY(9);
@@ -30,30 +31,27 @@ int main()
     p4.translada(2,4);
     p4.imprime();
     cout<<endl;
-    p5.setXY(10,4);
+    p5.setXY(1,0);
+    p5.imprime();
+    p5.rotacao(90);
+    p5.imprime();
 
-    cout<<"teste de polignos:"<<endl;
+    cout<<endl<<"teste de polignos:"<<endl;
 
     a.insertPontos(0,0);
     a.insertPontos(1,0);
     a.insertPontos(1,1);
     a.insertPontos(0,1);
 
-
-    cout<<a.numerodePontos()<<endl;
-
     a.imprimirPoligono();
-    float r= a.areaPoligono();
-    cout<<endl<<r;
+    cout<<endl;
+
     a.rotacaoPoligono(90);
-    a.imprimirPoligono();
-    cout<<endl;
-    a.transladaPoligono(1,1);
-    cout<<endl;
 
     a.imprimirPoligono();
-
-
+    cout<<endl;
+   b.Retangulo(0,0,2,2);
+   b.imprimirPoligono();
 
     return 0;
 }

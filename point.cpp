@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <math.h>
 #include "point.h"
 
 using namespace std;
@@ -65,4 +66,13 @@ void Point::translada(float a, float b)
 void Point::imprime(void){
   cout << "(" << x << ","
        << y << ")";
+}
+
+Point Point::rotacao(float a)
+{
+    float rad = a*M_PI/180;
+    Point ret;
+    ret.x = (x*cos(rad)) - (y*sin(rad));
+    ret.y = (x*sin(rad)) + (y*cos(rad));
+ return ret;
 }

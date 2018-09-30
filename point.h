@@ -26,6 +26,9 @@ void translada(float a, float b);
 
 void imprime(void);
 
+Point rotacao(float a);
+
+
 };
 
 #endif // POINT_H

@@ -5,36 +5,41 @@
 
 using namespace std;
 
+Point::Point()
+{
+
+}
+
 void Point::setX(float _x){
-  x = _x;
+    x = _x;
 }
 void Point::setY(float _y){
-  y = _y;
+    y = _y;
 }
 void Point::setXY(float _x, float _y){
-  x = _x;
-  y = _y;
+    x = _x;
+    y = _y;
 }
 
 float Point::getX(void){
-  return x;
+    return x;
 }
 float Point::getY(void){
-  return y;
+    return y;
 }
 
 Point Point::operator+(Point p1){
-  Point ret;
-  ret.x = x + p1.x;
-  ret.y = y + p1.y;
-  return ret;
+    Point ret;
+    ret.x = x + p1.x;
+    ret.y = y + p1.y;
+    return ret;
 }
 
 Point Point::operator-(Point p1){
-  Point ret;
-  ret.x = x - p1.x;
-  ret.y = y - p1.y;
-  return ret;
+    Point ret;
+    ret.x = x - p1.x;
+    ret.y = y - p1.y;
+    return ret;
 }
 
 Point Point::add(Point p1)
@@ -64,8 +69,8 @@ void Point::translada(float a, float b)
 }
 
 void Point::imprime(void){
-  cout << "(" << x << ","
-       << y << ")";
+    cout << "(" << x << ","
+         << y << ")";
 }
 
 Point Point::rotacao(float a)
@@ -74,5 +79,5 @@ Point Point::rotacao(float a)
     Point ret;
     ret.x = (x*cos(rad)) - (y*sin(rad));
     ret.y = (x*sin(rad)) + (y*cos(rad));
- return ret;
+    return ret;
 }

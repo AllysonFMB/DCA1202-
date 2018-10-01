@@ -8,14 +8,15 @@ private:
     Point pontos[100];
 public:
 
-void insertPontos(Point p);
-void insertPontos(float a, float b);
-int numerodePontos();
+    Poligono();
+    void insertPontos(Point p);
+    void insertPontos(float a, float b);
+    int numerodePontos();
 
-void transladaPoligono(float a, float b);
-float areaPoligono();
-void rotacaoPoligono(float angulo);
-void imprimirPoligono();
+    void transladaPoligono(float a, float b);
+    float areaPoligono();
+    void rotacaoPoligono(float angulo);
+    void imprimirPoligono();
 
 };
 

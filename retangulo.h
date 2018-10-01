@@ -5,10 +5,11 @@
 
 class Retangulo : public Poligono
 {
-    float x, y, largura, altura;
 
 public:
+
     Retangulo(float x, float y, float largura, float altura);
+
 };
 
 #endif // RETANGULO_H

@@ -4,6 +4,11 @@
 
 using namespace std;
 
+Poligono::Poligono()
+{
+
+}
+
 void Poligono::insertPontos(Point p)
 {
 

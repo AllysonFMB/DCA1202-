@@ -65,13 +65,21 @@ float Poligono::areaPoligono()
     return abs(a1-a2)/2;
 }
 
-void Poligono::rotacaoPoligono(float angulo)
+void Poligono::rotacaoPoligono(float angulo, Point rP)
 {
     float rad = angulo*3.141592/180;
+    float xrP, yrP, xPonto, yPonto;
 
-    for(int i=1; i<= npontos; i++){
-        pontos[i].setX((pontos[i].getX() * cos(rad)) - (pontos[i].getY() * sin(rad)) );
-        pontos[i].setY((pontos[i].getX() * sin(rad)) + (pontos[i].getY() * cos(rad)) );
+    for(int i=1; i<=npontos;i++){
+        xrP = rP.getX();
+        yrP = rP.getY();
+
+        xPonto = pontos[i].getX();
+        yPonto = pontos[i].getY();
+
+        pontos[i].setX(xrP + cos(rad)*(xPonto - xrP) - sin(rad)*(yPonto - yrP));
+        pontos[i].setX(yrP + sin(rad)*(xPonto - xrP) + cos(rad)*(yPonto - yrP));
+
     }
 }
 

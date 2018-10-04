@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 #include "point.h"
 #include "poligono.h"
 #include "retangulo.h"
@@ -62,10 +61,14 @@ int main()
     cout<<endl;
     cout<<"area do poligono: "<<r<<endl;
 
-    b.transladaPoligono(2,2);
+    b.transladaPoligono(0,0);
     b.imprimirPoligono();
     cout<<endl;
     cout<<"area do poligono: "<<r<<endl;
+    p1.setXY(0,0);
+    cout<<endl<<endl;
+    b.rotacaoPoligono(45,p1);
+    b.imprimirPoligono();
 
     return 0;
 }

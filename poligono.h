@@ -15,7 +15,7 @@ public:
 
     void transladaPoligono(float a, float b);
     float areaPoligono();
-    void rotacaoPoligono(float angulo);
+    void rotacaoPoligono(float angulo, Point rP);
     void imprimirPoligono();
 
 };

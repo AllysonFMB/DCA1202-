@@ -110,13 +110,27 @@ public:
    * }
    * </pre>**/
     void rotacaoPoligono(float angulo, float x, float y);
+
+    /**
+   * @brief RCMPoligono: Rotaciona o polígono de θ graus no sentido anti-horário em torno do centro de massa.
+   * @param angulo é um valor atribuido pelo usuário.
+   * <pre>
+   * int main(void){
+   * // criacao de um poligono retangulo
+   *    Poligono a;
+   *    a.insertPontos(0,0);
+   *    a.insertPontos(1,0);
+   *    a.insertPontos(1,1);
+   *    a.insertPontos(0,1);
+   *    a.RMCPoligno(90);
+   * }
+   * </pre>**/
+    float RCMPoligono(float angulo);
+
     /**
     * @brief imprimirPoligono: Imprimir o polígono armazenado da forma (x0,y0)→(x1,y1)→(x2,y2)→…​
     **/
     void imprimirPoligono();
-
-    float cmX();
-    float cmY();
 };
 
 

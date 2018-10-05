@@ -27,5 +27,7 @@ int main()
     cout<<"Area do retangulo: "<<area2<<endl;
     cout<<"Area original: "<<area1<<" vs Area translada : "<<area2<<endl;
 
+    a.RCMPoligono(35);
+    a.imprimirPoligono();
     return 0;
 }

@@ -59,11 +59,3 @@ void Point::imprime(void){
          << y << ")";
 }
 
-Point Point::rotacao(float a)
-{
-    float rad = a*M_PI/180;
-    Point ret;
-    ret.x = (x*cos(rad)) - (y*sin(rad));
-    ret.y = (x*sin(rad)) + (y*cos(rad));
-    return ret;
-}

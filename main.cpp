@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     float area1, area2;
-
+    Point p1,p2,p3;
     Retangulo a(0,0,3,4);
 
     a.imprimirPoligono();

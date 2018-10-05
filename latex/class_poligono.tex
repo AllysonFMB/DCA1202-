@@ -1,0 +1,223 @@
+\hypertarget{class_poligono}{}\section{Poligono Class Reference}
+\label{class_poligono}\index{Poligono@{Poligono}}
+
+
+A classe \mbox{\hyperlink{class_poligono}{Poligono}} serve para representar os pontos do polígono no espaço bidimensional.  
+
+
+
+
+{\ttfamily \#include $<$poligono.\+h$>$}
+
+Inheritance diagram for Poligono\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_poligono}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_poligono_a9311a9a1496878c09c8508b3636e2870}\label{class_poligono_a9311a9a1496878c09c8508b3636e2870}} 
+\mbox{\hyperlink{class_poligono_a9311a9a1496878c09c8508b3636e2870}{Poligono}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_poligono}{Poligono}} é o construtor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_poligono_a9bd6496f563d349046c74e3b0f03ef19}{insert\+Pontos}} (\mbox{\hyperlink{class_point}{Point}} p)
+\begin{DoxyCompactList}\small\item\em insert\+Pontos\+: Define os pontos do póligono. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_poligono_a7db9753df6a913b910f3d293f6324267}{insert\+Pontos}} (float a, float b)
+\begin{DoxyCompactList}\small\item\em insert\+Pontos\+: Define os pontos do póligono. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_poligono_a9d011cabfeeeb85eae016cd2474b5e59}\label{class_poligono_a9d011cabfeeeb85eae016cd2474b5e59}} 
+int \mbox{\hyperlink{class_poligono_a9d011cabfeeeb85eae016cd2474b5e59}{numerode\+Pontos}} ()
+\begin{DoxyCompactList}\small\item\em numerode\+Pontos\+: Retorna o número de pontos do polígono. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_poligono_a4d757f52ba9366ab13537fb19b363e1e}{translada\+Poligono}} (float a, float b)
+\begin{DoxyCompactList}\small\item\em translada\+Poligono\+: Translada todos os pontos do polígono para (+a,+b), usando a funnção translada do ponto. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_poligono_ac1e37e274f61dff6c421f972ef1cf891}\label{class_poligono_ac1e37e274f61dff6c421f972ef1cf891}} 
+float \mbox{\hyperlink{class_poligono_ac1e37e274f61dff6c421f972ef1cf891}{area\+Poligono}} ()
+\begin{DoxyCompactList}\small\item\em area\+Poligono\+: Retorna o valor da área do polígono. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_poligono_ac187000d9b4ee9a33b193ae5d67f09ac}{rotacao\+Poligono}} (float angulo, \mbox{\hyperlink{class_point}{Point}} p)
+\begin{DoxyCompactList}\small\item\em rotacao\+Poligono\+: Rotaciona o polígono de θ graus no sentido anti-\/horário em torno de um ponto (x0,y0) fornecido pelo usuário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_poligono_a16fcba48d87f60b030b61a54fd430fdd}{rotacao\+Poligono}} (float angulo, float x, float y)
+\begin{DoxyCompactList}\small\item\em rotacao\+Poligono\+: Rotaciona o polígono de θ graus no sentido anti-\/horário em torno de um ponto (x0,y0) fornecido pelo usuário. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_poligono_a61ad4f99fde11f7bb3077cd453152a95}{R\+C\+M\+Poligono}} (float angulo)
+\begin{DoxyCompactList}\small\item\em R\+C\+M\+Poligono\+: Rotaciona o polígono de θ graus no sentido anti-\/horário em torno do centro de massa. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_poligono_a824ada0183274d23180999c769947aaa}\label{class_poligono_a824ada0183274d23180999c769947aaa}} 
+void \mbox{\hyperlink{class_poligono_a824ada0183274d23180999c769947aaa}{imprimir\+Poligono}} ()
+\begin{DoxyCompactList}\small\item\em imprimir\+Poligono\+: Imprimir o polígono armazenado da forma (x0,y0)→(x1,y1)→(x2,y2)→…​ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A classe \mbox{\hyperlink{class_poligono}{Poligono}} serve para representar os pontos do polígono no espaço bidimensional. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_poligono_a9bd6496f563d349046c74e3b0f03ef19}\label{class_poligono_a9bd6496f563d349046c74e3b0f03ef19}} 
+\index{Poligono@{Poligono}!insert\+Pontos@{insert\+Pontos}}
+\index{insert\+Pontos@{insert\+Pontos}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{insert\+Pontos()}{insertPontos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Poligono\+::insert\+Pontos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+insert\+Pontos\+: Define os pontos do póligono. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & é o valor de um ponto atribuido ao póligono. 
+\begin{DoxyPre}
+int main(void)\{
+// criacao de um poligono retangulo
+   \mbox{\hyperlink{class_poligono}{Poligono}} a;
+   \mbox{\hyperlink{class_point}{Point}} p1,p2,p3,p4;
+   p1.setXY(0,0);
+   p2.setXY(1,0);
+   p1.setXY(1,1);
+   p2.setXY(0,1);
+   a.insertPontos(p1);
+   a.insertPontos(p2);
+   a.insertPontos(p3);
+   a.insertPontos(p4);
+\}
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_poligono_a7db9753df6a913b910f3d293f6324267}\label{class_poligono_a7db9753df6a913b910f3d293f6324267}} 
+\index{Poligono@{Poligono}!insert\+Pontos@{insert\+Pontos}}
+\index{insert\+Pontos@{insert\+Pontos}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{insert\+Pontos()}{insertPontos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Poligono\+::insert\+Pontos (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+insert\+Pontos\+: Define os pontos do póligono. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & e b é o valor de um ponto atribuido ao póligono. 
+\begin{DoxyPre}
+int main(void)\{
+// criacao de um poligono retangulo
+   \mbox{\hyperlink{class_poligono}{Poligono}} a;
+   a.insertPontos(0,0);
+   a.insertPontos(1,0);
+   a.insertPontos(1,1);
+   a.insertPontos(0,1);
+\}
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_poligono_a61ad4f99fde11f7bb3077cd453152a95}\label{class_poligono_a61ad4f99fde11f7bb3077cd453152a95}} 
+\index{Poligono@{Poligono}!R\+C\+M\+Poligono@{R\+C\+M\+Poligono}}
+\index{R\+C\+M\+Poligono@{R\+C\+M\+Poligono}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{R\+C\+M\+Poligono()}{RCMPoligono()}}
+{\footnotesize\ttfamily float Poligono\+::\+R\+C\+M\+Poligono (\begin{DoxyParamCaption}\item[{float}]{angulo }\end{DoxyParamCaption})}
+
+
+
+R\+C\+M\+Poligono\+: Rotaciona o polígono de θ graus no sentido anti-\/horário em torno do centro de massa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angulo} & é um valor atribuido pelo usuário. 
+\begin{DoxyPre}
+int main(void)\{
+// criacao de um poligono retangulo
+   \mbox{\hyperlink{class_poligono}{Poligono}} a;
+   a.insertPontos(0,0);
+   a.insertPontos(1,0);
+   a.insertPontos(1,1);
+   a.insertPontos(0,1);
+   a.RMCPoligno(90);
+\}
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_poligono_ac187000d9b4ee9a33b193ae5d67f09ac}\label{class_poligono_ac187000d9b4ee9a33b193ae5d67f09ac}} 
+\index{Poligono@{Poligono}!rotacao\+Poligono@{rotacao\+Poligono}}
+\index{rotacao\+Poligono@{rotacao\+Poligono}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{rotacao\+Poligono()}{rotacaoPoligono()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Poligono\+::rotacao\+Poligono (\begin{DoxyParamCaption}\item[{float}]{angulo,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+rotacao\+Poligono\+: Rotaciona o polígono de θ graus no sentido anti-\/horário em torno de um ponto (x0,y0) fornecido pelo usuário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angulo} & e p são valores atribuido pelo usuário, ângulo e ponto de rotação. 
+\begin{DoxyPre}
+int main(void)\{
+// criacao de um poligono retangulo
+   \mbox{\hyperlink{class_poligono}{Poligono}} a;
+   \mbox{\hyperlink{class_point}{Point}} p;
+   a.insertPontos(0,0);
+   a.insertPontos(1,0);
+   a.insertPontos(1,1);
+   a.insertPontos(0,1);
+   p.setXY(0,0);
+   a.rotacaoPoligno(90,p);
+\}
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_poligono_a16fcba48d87f60b030b61a54fd430fdd}\label{class_poligono_a16fcba48d87f60b030b61a54fd430fdd}} 
+\index{Poligono@{Poligono}!rotacao\+Poligono@{rotacao\+Poligono}}
+\index{rotacao\+Poligono@{rotacao\+Poligono}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{rotacao\+Poligono()}{rotacaoPoligono()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Poligono\+::rotacao\+Poligono (\begin{DoxyParamCaption}\item[{float}]{angulo,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+rotacao\+Poligono\+: Rotaciona o polígono de θ graus no sentido anti-\/horário em torno de um ponto (x0,y0) fornecido pelo usuário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angulo,x} & e y são valores atribuido pelo usuário, ângulo e ponto de rotação (x,y). 
+\begin{DoxyPre}
+int main(void)\{
+// criacao de um poligono retangulo
+   \mbox{\hyperlink{class_poligono}{Poligono}} a;
+   a.insertPontos(0,0);
+   a.insertPontos(1,0);
+   a.insertPontos(1,1);
+   a.insertPontos(0,1);
+   a.rotacaoPoligno(90,0,0);
+\}
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_poligono_a4d757f52ba9366ab13537fb19b363e1e}\label{class_poligono_a4d757f52ba9366ab13537fb19b363e1e}} 
+\index{Poligono@{Poligono}!translada\+Poligono@{translada\+Poligono}}
+\index{translada\+Poligono@{translada\+Poligono}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{translada\+Poligono()}{transladaPoligono()}}
+{\footnotesize\ttfamily void Poligono\+::translada\+Poligono (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+translada\+Poligono\+: Translada todos os pontos do polígono para (+a,+b), usando a funnção translada do ponto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & e b são valores atribuido pelo usuário. 
+\begin{DoxyPre}
+int main(void)\{
+// criacao de um poligono retangulo
+   \mbox{\hyperlink{class_poligono}{Poligono}} a;
+   a.insertPontos(0,0);
+   a.insertPontos(1,0);
+   a.insertPontos(1,1);
+   a.insertPontos(0,1);
+   a.translada(2,5); //desloca o poligono em todos os pontos (x+a, y+b)
+\}
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+poligono.\+h\item 
+poligono.\+cpp\end{DoxyCompactItemize}

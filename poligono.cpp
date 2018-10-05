@@ -52,7 +52,6 @@ void Poligono::transladaPoligono(float a, float b)
 
 float Poligono::areaPoligono()
 {
-    float area = 0.0;
     float a1 = 0.0, a2=0.0;
 
     pontos[npontos+1] = pontos[1];
@@ -65,22 +64,38 @@ float Poligono::areaPoligono()
     return abs(a1-a2)/2;
 }
 
-void Poligono::rotacaoPoligono(float angulo, Point rP)
+void Poligono::rotacaoPoligono(float angulo, Point p)
 {
-    float rad = angulo*3.141592/180;
-    float xrP, yrP, xPonto, yPonto;
+    float xi,yi;
+    float xf, yf;
+    angulo = angulo*M_PI/180;
 
-    for(int i=1; i<=npontos;i++){
-        xrP = rP.getX();
-        yrP = rP.getY();
+    xi = p.getX();
+    yi = p.getY();
 
-        xPonto = pontos[i].getX();
-        yPonto = pontos[i].getY();
+    for(int i=1; i<= npontos; i++){
+       xf = pontos[i].getX();
+       yf = pontos[i].getY();
 
-        pontos[i].setX(xrP + cos(rad)*(xPonto - xrP) - sin(rad)*(yPonto - yrP));
-        pontos[i].setX(yrP + sin(rad)*(xPonto - xrP) + cos(rad)*(yPonto - yrP));
-
+        pontos[i].setX(xi + cos(angulo)*(xf-xi) - sin(angulo)*(yf-yi));
+        pontos[i].setY(xi + sin(angulo)*(xf-xi) + cos(angulo)*(yf-yi));
     }
+
+}
+
+void Poligono::rotacaoPoligono(float angulo, float x, float y)
+{
+    float xf, yf;
+    angulo = angulo*M_PI/180;
+
+    for(int i=1; i<= npontos; i++){
+       xf = pontos[i].getX();
+       yf = pontos[i].getY();
+
+        pontos[i].setX(x + cos(angulo)*(xf-x) - sin(angulo)*(yf-y));
+        pontos[i].setY(x + sin(angulo)*(xf-x) + cos(angulo)*(yf-y));
+    }
+
 }
 
 void Poligono::imprimirPoligono()
@@ -89,4 +104,28 @@ void Poligono::imprimirPoligono()
         pontos[i].imprime();
         cout<<" -> ";
     }
+}
+
+float Poligono::cmX()
+{
+    float xcm = 0.0;
+    float media;
+    for(int i =1; i<=npontos;i++){
+        xcm += pontos[i].getX();
+    }
+
+    media = xcm/npontos;
+    return media;
+}
+
+float Poligono::cmY()
+{
+    float ycm =0.0;
+    float media;
+    for(int i =1; i<=npontos;i++){
+        ycm += pontos[i].getY();
+    }
+
+    media = ycm/npontos;
+    return media;
 }

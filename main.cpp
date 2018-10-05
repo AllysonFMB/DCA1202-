@@ -13,7 +13,7 @@ int main()
     Retangulo a(0,0,3,4);
 
     a.imprimirPoligono();
-    cout<<endl;
+    cout<<endl<<endl;
 
     area1 = a.areaPoligono();
     cout<<"Area do retangulo: "<<area1<<endl;
@@ -21,13 +21,17 @@ int main()
     a.transladaPoligono(-3,4);
 
     a.imprimirPoligono();
-    cout<<endl;
+    cout<<endl<<endl;
 
     area2 = a.areaPoligono();
     cout<<"Area do retangulo: "<<area2<<endl;
+    cout<<endl<<endl;
     cout<<"Area original: "<<area1<<" vs Area translada : "<<area2<<endl;
+    cout<<endl<<endl;
 
     a.RCMPoligono(35);
     a.imprimirPoligono();
+    cout<<"area depois da rotacao: "<<a.areaPoligono()<<endl;
+
     return 0;
 }

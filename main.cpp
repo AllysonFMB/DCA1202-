@@ -1,7 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include "point.h"
-#include "poligono.h"
 #include "retangulo.h"
 
 using namespace std;
@@ -13,7 +11,6 @@ int main()
     Retangulo a(0,0,3,4);
 
     a.imprimirPoligono();
-    cout<<endl<<endl;
 
     area1 = a.areaPoligono();
     cout<<"Area do retangulo: "<<area1<<endl;
@@ -21,13 +18,10 @@ int main()
     a.transladaPoligono(-3,4);
 
     a.imprimirPoligono();
-    cout<<endl<<endl;
-
     area2 = a.areaPoligono();
     cout<<"Area do retangulo: "<<area2<<endl;
-    cout<<endl<<endl;
+
     cout<<"Area original: "<<area1<<" vs Area translada : "<<area2<<endl;
-    cout<<endl<<endl;
 
     a.RCMPoligono(35);
     a.imprimirPoligono();
